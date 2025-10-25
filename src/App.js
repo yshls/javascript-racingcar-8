@@ -9,7 +9,7 @@ class App {
 
     const carNamesSplit = carNamesInput.split(',').map((name) => name.trim());
 
-    let nameInvalid = carNamesSplit.some(
+    const nameInvalid = carNamesSplit.some(
       (name) => name.length > 5 || name.length < 1
     );
 
