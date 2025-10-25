@@ -37,6 +37,10 @@ class App {
     for (let i = 0; i < numberCount; i++) {
       cars.forEach((car) => {
         const randomNumber = MissionUtils.Random.pickNumberInRange(0, 9);
+
+        if (randomNumber >= 4) {
+          car.position++;
+        }
       });
     }
   }
