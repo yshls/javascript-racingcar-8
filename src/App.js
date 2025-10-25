@@ -15,6 +15,10 @@ class App {
     if (nameInvalid) {
       throw new Error('[ERROR]');
     }
+
+    const numberInput = await MissionUtils.Console.readLineAsync(
+      '시도할 회수는 몇회인가요?'
+    );
   }
 }
 
