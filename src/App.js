@@ -27,6 +27,11 @@ class App {
     if (numberCountInvalid) {
       throw new Error('[ERROR]');
     }
+
+    const cars = carNamesSplit.map((name) => ({
+      name,
+      position: 0,
+    }));
   }
 }
 
