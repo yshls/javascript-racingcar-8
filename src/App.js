@@ -42,12 +42,19 @@ class App {
           car.position++;
         }
       });
-    }
 
-    cars.forEach((car) => {
-      const result = `${car.name} : ${'-'.repeat(car.position)}`;
-      MissionUtils.Console.print(result);
-    });
+      cars.forEach((car) => {
+        const result = `${car.name} : ${'-'.repeat(car.position)}`;
+        MissionUtils.Console.print(result);
+      });
+      MissionUtils.Console.print('');
+    }
+    const positions = cars.map((car) => car.position);
+    const winningPosition = Math.max(...positions);
+
+    const winners = cars.filter((car) => car.position === winningPosition);
+    const winnerNames = winners.map((car) => car.name);
+    MissionUtils.Console.print(`최종 우승자 : ${winnerNames.join(', ')}`);
   }
 }
 
