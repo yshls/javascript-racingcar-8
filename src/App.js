@@ -32,6 +32,13 @@ class App {
       name,
       position: 0,
     }));
+
+    MissionUtils.Console.print('\n실행 결과');
+    for (let i = 0; i < numberCount; i++) {
+      cars.forEach((car) => {
+        const randomNumber = MissionUtils.Random.pickNumberInRange(0, 9);
+      });
+    }
   }
 }
 
