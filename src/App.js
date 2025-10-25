@@ -43,6 +43,11 @@ class App {
         }
       });
     }
+
+    cars.forEach((car) => {
+      const result = `${car.name} : ${'-'.repeat(car.position)}`;
+      MissionUtils.Console.print(result);
+    });
   }
 }
 
