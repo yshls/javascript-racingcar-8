@@ -16,9 +16,17 @@ class App {
       throw new Error('[ERROR]');
     }
 
-    const numberInput = await MissionUtils.Console.readLineAsync(
-      '시도할 회수는 몇회인가요?'
+    const numberCountInput = await MissionUtils.Console.readLineAsync(
+      '시도할 횟수는 몇 회인가요?'
     );
+
+    const numberCount = Number(numberCountInput);
+    const numberCountInvalid =
+      isNaN(numberCount) || numberCount <= 0 || !Number.isInteger(numberCount);
+
+    if (numberCountInvalid) {
+      throw new Error('[ERROR]');
+    }
   }
 }
 
